@@ -1,6 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 using UnrealBuildTool;
+using System;
+using System.IO;
 
 public class Protobuf : ModuleRules
 {
@@ -11,6 +13,8 @@ public class Protobuf : ModuleRules
 		PublicDependencyModuleNames.AddRange(new string[] { "Core" });
 
 		PrivateDependencyModuleNames.AddRange(new string[] { });
+
+		PublicSystemIncludePaths.Add(Path.Combine(ModuleDirectory, "include"));
 
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
