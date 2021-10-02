@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package mongo;
+
+message GameState
+{
+  int64 timestamp = 1;
+  repeated uint32 player_uid = 2;
+}
